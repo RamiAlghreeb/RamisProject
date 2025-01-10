@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rami Alghreeb - Stunning Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #000, #660000);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(45deg, darkred, black);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #ffcccc;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #660000, #000);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        /* Cards Section */
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 20px;
+        }
+
+        .card {
+            opacity: 0;
+            transform: translateY(50px);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ffcccc;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(45deg, black, darkred);
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffcccc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Rami Alghreeb</h1>
+        <p>Software Engineer | Gamer | Innovator</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Welcome to My World</h2>
+        <p>Hi there! I'm Rami Alghreeb, an 18-year-old software engineering student passionate about IT, cybersecurity, rockets, and gaming. Join me on my journey to merge software with innovation for a better future.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="cards">
+        <div class="card">
+            <h3>Cybersecurity</h3>
+            <p>Exploring ways to protect systems from modern threats while securing the digital landscape.</p>
+        </div>
+        <div class="card">
+            <h3>Gaming Enthusiast</h3>
+            <p>Diving deep into Rockstar games and leveraging gaming as an inspiration for coding challenges.</p>
+        </div>
+        <div class="card">
+            <h3>Rocket Science</h3>
+            <p>Combining software and hardware to contribute to the future of defense and space exploration.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rami Alghreeb - All Rights Reserved</p>
+        <p>Made with ❤️ by Rami</p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+
+    <!-- JavaScript for Scroll Animations -->
+    <script>
+        // Intersection Observer for scroll animations
+        const cards = document.querySelectorAll('.card');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
+
