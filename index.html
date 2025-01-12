@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rami Alghreeb - Stunning Portfolio</title>
+    <title>Rami Alghreeb - Portfolio</title>
     <style>
         /* Global Styles */
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #000, #660000);
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #330000, #660000);
             color: #fff;
             overflow-x: hidden;
         }
@@ -63,6 +63,22 @@
             line-height: 1.8;
         }
 
+        /* About Section */
+        .about {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
         /* Cards Section */
         .cards {
             display: flex;
@@ -98,6 +114,51 @@
         .card p {
             font-size: 1rem;
             line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .contact a {
+            color: #ffcccc;
+            text-decoration: none;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #fff;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            font-size: 1.5rem;
+            margin: 0 15px;
+            display: inline-block;
+            color: #ffcccc;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
         }
 
         /* Footer */
@@ -136,6 +197,12 @@
         <p>Hi there! I'm Rami Alghreeb, an 18-year-old software engineering student passionate about IT, cybersecurity, rockets, and gaming. Join me on my journey to merge software with innovation for a better future.</p>
     </section>
 
+    <!-- About Section -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm Rami Alghreeb, an 18-year-old software engineering student with a passion for gaming, programming, and advancing technology. My interests lie in IT roles related to cybersecurity, electronic warfare, and software development for advanced defense systems. I aim to contribute to my country's defense and space exploration efforts through innovative solutions.</p>
+    </section>
+
     <!-- Projects Section -->
     <section class="cards">
         <div class="card">
@@ -149,6 +216,18 @@
         <div class="card">
             <h3>Rocket Science</h3>
             <p>Combining software and hardware to contribute to the future of defense and space exploration.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Ways to Reach Me</h2>
+        <p>Email: <a href="mailto:ramialgareb@gmail.com">ramialgareb@gmail.com</a></p>
+
+        <div class="social-links">
+            <p>Follow me on social media:</p>
+            <a href="https://www.instagram.com/ramialghreeb?igsh=aWFtcG9pbXZ0YWR3" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/profile.php?id=100026977242780&mibextid=ZbWKwL" target="_blank">Facebook</a>
         </div>
     </section>
 
